@@ -1,3 +1,7 @@
 [submodule "emsdk"]
 	path = emsdk
 	url = https://github.com/emscripten-core/emsdk.git
+
+[submodule "tinyxml"]
+    path = src/tinyxml 
+    url = https://github.com/vmayoral/tinyxml.git
