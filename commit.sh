@@ -22,10 +22,24 @@ function git_sparse_checkout {
         for path in $* ;do
             echo "${path}" >> .git/info/sparse-checkout
         done
-        git remote add origin ${url}
-    
-        git fetch --depth=1 origin ${tag}
+        git remote remove origin
+        git remote add origin https://github.com/schooldev49/Cpp-game
+        git config remote.origin.pushurl https://github.com/schooldev49/cpp-game-web
+        git fetch --filter=blob:none origin ${tag}
         git checkout ${tag}
+        git rm -r --cached emsdk
+        [ -d ".git/modules/emsdk" ] && rm -rf .git/modules/emsdk
+        [ -d "assets" ] && rm -rf assets
+        [ -d "test" ] && mv -v test/* ~/cpp-game-web/
+        [ -d "test" ] && rm -rf test
+        [ -d "src" ] && rm -rf src 
+        git rm -rf emsdk
+        git add --all
+                
+
+        git commit -m "committed from shell"
+        git push -f -u origin main
+
 
     
 }
@@ -34,4 +48,4 @@ function git_sparse_checkout {
   dir=$(pwd)/sources
   prj=bash-scripts
   tag=main
-  git_sparse_checkout $url $dir $prj $tag "test/*"
+  git_sparse_checkout $url $dir $prj $tag "test/*" index.bc index.data index.html index.js index.wasm "emsdk/*"
