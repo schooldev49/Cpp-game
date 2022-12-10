@@ -1,7 +1,7 @@
 #include "Level.h"
 Level* Level::s_Instance = nullptr;
 bool Level::Init(std::string mapN){
-
+    if (m_guiObjects.size() == 0){
      std::string mapID = Play::GetInstance()->mapName;
       std::cout << mapID << " is loading...\n";
         if (!MapParser::GetInstance()->Load(mapID, "assets/maps/" + mapID + ".tmx")){
@@ -26,7 +26,7 @@ bool Level::Init(std::string mapN){
         m_guiObjects.push_back(levelText);
         m_guiObjects.push_back(levelText2);
 
-    
+    }
     Properties* propChar = new Properties("player",100,200,160,160);
     MainChar* player = new MainChar(propChar);
     m_gameObjects.push_back(player);
@@ -116,7 +116,7 @@ std::string Level::AddLevelStr(bool add){
         std::cout << "\n" << substrD << "\n";
         int id = std::stoi(substrD);
         std::cout << id << "hi \n";
-        if (add){ // currently only 2 MAP (trol)
+       /* if (add){ // currently only 2 MAP (trol)
             bool canEnter = MapParser::GetInstance()->CanEnterMap("assets/maps/" + std::to_string(id+1) + ".tmx");
             if (canEnter){
                 id += 1;
@@ -126,8 +126,15 @@ std::string Level::AddLevelStr(bool add){
                 id = 1;
             }
 
-        }
+        }*/
+        if (id < 50 && add){ // currently only 2 MAP (trol)
+            id += 1;
+            std::cout << id << "hi \n";
 
+        } else if (add){
+            id = 1;
+        }
+ 
         std::string newLevelName = "level"; 
 
         std::string string2 = std::to_string(id);
@@ -143,8 +150,9 @@ std::string Level::AddLevelStr(bool add){
 
 
         return rval;
+    } else {
+        return "level1";
     }
-    return "level1";
 }
 void Level::ChangeMap(){
      std::string mapID = Play::GetInstance()->mapName;
@@ -152,10 +160,7 @@ void Level::ChangeMap(){
         if (m_LevelMap){
             m_LevelMap->Clean();
         }
-        for (auto i : m_guiObjects){
-            i->Clean();
-            delete i;
-        }
+        
         if (!MapParser::GetInstance()->Load(mapID, "assets/maps/" + mapID + ".tmx")){
             std::cout << "Unable to load map!";
         }

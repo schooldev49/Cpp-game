@@ -3,10 +3,11 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "level2.tmx",
+    "activeFile": "level4.tmx",
     "expandedProjectPaths": [
         "."
     ],
+    "file.lastUsedOpenFilter": "All Files (*)",
     "fileStates": {
         "": {
             "scaleInDock": 1,
@@ -27,8 +28,8 @@
             "scale": 1,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 3266,
-                "y": 318
+                "x": 1600,
+                "y": 319.5
             }
         },
         "level1.tmx#Tileset": {
@@ -56,14 +57,42 @@
             "scale": 0.75,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 2285.333333333333,
-                "y": 560
+                "x": 1600,
+                "y": 320.6666666666667
             }
         },
         "level2.tmx#Tileset": {
             "scaleInDock": 1
         },
         "level2.tmx#key": {
+            "scaleInDock": 1
+        },
+        "level3.tmx": {
+            "scale": 0.75,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 1600,
+                "y": 320.6666666666667
+            }
+        },
+        "level3.tmx#Tileset": {
+            "scaleInDock": 1
+        },
+        "level3.tmx#key": {
+            "scaleInDock": 1
+        },
+        "level4.tmx": {
+            "scale": 0.75,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 1288,
+                "y": 724
+            }
+        },
+        "level4.tmx#Tileset": {
+            "scaleInDock": 1
+        },
+        "level4.tmx#key": {
             "scaleInDock": 1
         }
     },
@@ -72,12 +101,16 @@
     "map.width": 100,
     "openFiles": [
         "level1.tmx",
-        "level2.tmx"
+        "level2.tmx",
+        "level3.tmx",
+        "level4.tmx"
     ],
     "project": "codeday2022game.tiled-project",
     "recentFiles": [
+        "level4.tmx",
         "level1.tmx",
-        "level2.tmx"
+        "level2.tmx",
+        "level3.tmx"
     ],
     "tileset.embedInMap": true,
     "tileset.type": 0

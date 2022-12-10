@@ -200,7 +200,7 @@ Module['FS_createPath']("/assets", "texturePack", true, true);
     }
 
     }
-    loadPackage({"files": [{"filename": "/assets/Tileset.png", "start": 0, "end": 15004}, {"filename": "/assets/background3.png", "start": 15004, "end": 37052}, {"filename": "/assets/button.png", "start": 37052, "end": 39024}, {"filename": "/assets/buttont.png", "start": 39024, "end": 40441}, {"filename": "/assets/char.png", "start": 40441, "end": 46237}, {"filename": "/assets/fonts/comic.ttf", "start": 46237, "end": 291837}, {"filename": "/assets/maps/Tileset.png", "start": 291837, "end": 340963}, {"filename": "/assets/maps/codeday2022game.tiled-project", "start": 340963, "end": 341136}, {"filename": "/assets/maps/codeday2022game.tiled-session", "start": 341136, "end": 343113}, {"filename": "/assets/maps/key.png", "start": 343113, "end": 344545}, {"filename": "/assets/maps/level1.json", "start": 344545, "end": 351131}, {"filename": "/assets/maps/level1.tmx", "start": 351131, "end": 359971}, {"filename": "/assets/maps/level2.tmx", "start": 359971, "end": 368826}, {"filename": "/assets/rickroll.png", "start": 368826, "end": 507300}, {"filename": "/assets/save/save1.xml", "start": 507300, "end": 507404}, {"filename": "/assets/texturePack/almostup.png", "start": 507404, "end": 508592}, {"filename": "/assets/texturePack/anims.tml", "start": 508592, "end": 509105}, {"filename": "/assets/texturePack/beforeupalmost.png", "start": 509105, "end": 510293}, {"filename": "/assets/texturePack/first.png", "start": 510293, "end": 517052}, {"filename": "/assets/texturePack/fullup.png", "start": 517052, "end": 518237}, {"filename": "/assets/texturePack/last.png", "start": 518237, "end": 519425}, {"filename": "/assets/texturePack/second2last.png", "start": 519425, "end": 520625}, {"filename": "/assets/textures.tml", "start": 520625, "end": 520915}], "remote_package_size": 520915});
+    loadPackage({"files": [{"filename": "/assets/Tileset.png", "start": 0, "end": 15004}, {"filename": "/assets/background3.png", "start": 15004, "end": 37052}, {"filename": "/assets/button.png", "start": 37052, "end": 39024}, {"filename": "/assets/buttont.png", "start": 39024, "end": 40441}, {"filename": "/assets/char.png", "start": 40441, "end": 46237}, {"filename": "/assets/fonts/comic.ttf", "start": 46237, "end": 291837}, {"filename": "/assets/maps/Tileset.png", "start": 291837, "end": 340963}, {"filename": "/assets/maps/codeday2022game.tiled-project", "start": 340963, "end": 341145}, {"filename": "/assets/maps/codeday2022game.tiled-session", "start": 341145, "end": 343931}, {"filename": "/assets/maps/key.png", "start": 343931, "end": 345363}, {"filename": "/assets/maps/level1.json", "start": 345363, "end": 351949}, {"filename": "/assets/maps/level1.tmx", "start": 351949, "end": 360789}, {"filename": "/assets/maps/level10.tmx", "start": 360789, "end": 369644}, {"filename": "/assets/maps/level11.tmx", "start": 369644, "end": 378499}, {"filename": "/assets/maps/level12.tmx", "start": 378499, "end": 387354}, {"filename": "/assets/maps/level13.tmx", "start": 387354, "end": 396209}, {"filename": "/assets/maps/level14.tmx", "start": 396209, "end": 405064}, {"filename": "/assets/maps/level15.tmx", "start": 405064, "end": 413919}, {"filename": "/assets/maps/level16.tmx", "start": 413919, "end": 422774}, {"filename": "/assets/maps/level17.tmx", "start": 422774, "end": 431629}, {"filename": "/assets/maps/level18.tmx", "start": 431629, "end": 440484}, {"filename": "/assets/maps/level19.tmx", "start": 440484, "end": 449339}, {"filename": "/assets/maps/level2.tmx", "start": 449339, "end": 458194}, {"filename": "/assets/maps/level20.tmx", "start": 458194, "end": 467049}, {"filename": "/assets/maps/level21.tmx", "start": 467049, "end": 475904}, {"filename": "/assets/maps/level22.tmx", "start": 475904, "end": 484759}, {"filename": "/assets/maps/level23.tmx", "start": 484759, "end": 493614}, {"filename": "/assets/maps/level24.tmx", "start": 493614, "end": 502469}, {"filename": "/assets/maps/level25.tmx", "start": 502469, "end": 511324}, {"filename": "/assets/maps/level26.tmx", "start": 511324, "end": 520179}, {"filename": "/assets/maps/level27.tmx", "start": 520179, "end": 529034}, {"filename": "/assets/maps/level28.tmx", "start": 529034, "end": 537889}, {"filename": "/assets/maps/level29.tmx", "start": 537889, "end": 546744}, {"filename": "/assets/maps/level3.tmx", "start": 546744, "end": 555599}, {"filename": "/assets/maps/level30.tmx", "start": 555599, "end": 564454}, {"filename": "/assets/maps/level31.tmx", "start": 564454, "end": 573309}, {"filename": "/assets/maps/level32.tmx", "start": 573309, "end": 582164}, {"filename": "/assets/maps/level33.tmx", "start": 582164, "end": 591019}, {"filename": "/assets/maps/level34.tmx", "start": 591019, "end": 599874}, {"filename": "/assets/maps/level35.tmx", "start": 599874, "end": 608729}, {"filename": "/assets/maps/level36.tmx", "start": 608729, "end": 617584}, {"filename": "/assets/maps/level37.tmx", "start": 617584, "end": 626439}, {"filename": "/assets/maps/level38.tmx", "start": 626439, "end": 635294}, {"filename": "/assets/maps/level39.tmx", "start": 635294, "end": 644149}, {"filename": "/assets/maps/level4.tmx", "start": 644149, "end": 653004}, {"filename": "/assets/maps/level40.tmx", "start": 653004, "end": 661859}, {"filename": "/assets/maps/level41.tmx", "start": 661859, "end": 670714}, {"filename": "/assets/maps/level42.tmx", "start": 670714, "end": 679569}, {"filename": "/assets/maps/level43.tmx", "start": 679569, "end": 688424}, {"filename": "/assets/maps/level44.tmx", "start": 688424, "end": 697279}, {"filename": "/assets/maps/level45.tmx", "start": 697279, "end": 706134}, {"filename": "/assets/maps/level46.tmx", "start": 706134, "end": 714989}, {"filename": "/assets/maps/level47.tmx", "start": 714989, "end": 723844}, {"filename": "/assets/maps/level48.tmx", "start": 723844, "end": 732699}, {"filename": "/assets/maps/level49.tmx", "start": 732699, "end": 741554}, {"filename": "/assets/maps/level5.tmx", "start": 741554, "end": 750409}, {"filename": "/assets/maps/level50.tmx", "start": 750409, "end": 759264}, {"filename": "/assets/maps/level6.tmx", "start": 759264, "end": 768119}, {"filename": "/assets/maps/level7.tmx", "start": 768119, "end": 776974}, {"filename": "/assets/maps/level8.tmx", "start": 776974, "end": 785829}, {"filename": "/assets/maps/level9.tmx", "start": 785829, "end": 794684}, {"filename": "/assets/maps/rules.txt", "start": 794684, "end": 794684}, {"filename": "/assets/rickroll.png", "start": 794684, "end": 933158}, {"filename": "/assets/save/save1.xml", "start": 933158, "end": 933262}, {"filename": "/assets/texturePack/almostup.png", "start": 933262, "end": 934450}, {"filename": "/assets/texturePack/anims.tml", "start": 934450, "end": 934963}, {"filename": "/assets/texturePack/beforeupalmost.png", "start": 934963, "end": 936151}, {"filename": "/assets/texturePack/first.png", "start": 936151, "end": 942910}, {"filename": "/assets/texturePack/fullup.png", "start": 942910, "end": 944095}, {"filename": "/assets/texturePack/last.png", "start": 944095, "end": 945283}, {"filename": "/assets/texturePack/second2last.png", "start": 945283, "end": 946483}, {"filename": "/assets/textures.tml", "start": 946483, "end": 946773}], "remote_package_size": 946773});
 
   })();
 
@@ -8660,13 +8660,13 @@ var _malloc = Module["_malloc"] = function() {
 };
 
 /** @type {function(...*):?} */
-var _saveSetjmp = Module["_saveSetjmp"] = function() {
-  return (_saveSetjmp = Module["_saveSetjmp"] = Module["asm"]["saveSetjmp"]).apply(null, arguments);
+var ___errno_location = Module["___errno_location"] = function() {
+  return (___errno_location = Module["___errno_location"] = Module["asm"]["__errno_location"]).apply(null, arguments);
 };
 
 /** @type {function(...*):?} */
-var ___errno_location = Module["___errno_location"] = function() {
-  return (___errno_location = Module["___errno_location"] = Module["asm"]["__errno_location"]).apply(null, arguments);
+var _saveSetjmp = Module["_saveSetjmp"] = function() {
+  return (_saveSetjmp = Module["_saveSetjmp"] = Module["asm"]["saveSetjmp"]).apply(null, arguments);
 };
 
 /** @type {function(...*):?} */
@@ -8740,10 +8740,21 @@ var dynCall_iiiiiijj = Module["dynCall_iiiiiijj"] = function() {
 };
 
 
-function invoke_ii(index,a1) {
+function invoke_viiii(index,a1,a2,a3,a4) {
   var sp = stackSave();
   try {
-    return getWasmTableEntry(index)(a1);
+    getWasmTableEntry(index)(a1,a2,a3,a4);
+  } catch(e) {
+    stackRestore(sp);
+    if (e !== e+0) throw e;
+    _setThrew(1, 0);
+  }
+}
+
+function invoke_iii(index,a1,a2) {
+  var sp = stackSave();
+  try {
+    return getWasmTableEntry(index)(a1,a2);
   } catch(e) {
     stackRestore(sp);
     if (e !== e+0) throw e;
@@ -8784,10 +8795,10 @@ function invoke_vi(index,a1) {
   }
 }
 
-function invoke_iii(index,a1,a2) {
+function invoke_ii(index,a1) {
   var sp = stackSave();
   try {
-    return getWasmTableEntry(index)(a1,a2);
+    return getWasmTableEntry(index)(a1);
   } catch(e) {
     stackRestore(sp);
     if (e !== e+0) throw e;
@@ -8854,17 +8865,6 @@ function invoke_i(index) {
   var sp = stackSave();
   try {
     return getWasmTableEntry(index)();
-  } catch(e) {
-    stackRestore(sp);
-    if (e !== e+0) throw e;
-    _setThrew(1, 0);
-  }
-}
-
-function invoke_viiii(index,a1,a2,a3,a4) {
-  var sp = stackSave();
-  try {
-    getWasmTableEntry(index)(a1,a2,a3,a4);
   } catch(e) {
     stackRestore(sp);
     if (e !== e+0) throw e;
