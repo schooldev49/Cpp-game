@@ -2,9 +2,6 @@
 #include <stdlib.h>
 #include <SDL2/SDL.h>
 #include <iostream>
-#include "../systemfiles/ObjectR.h"
-
-static Registrar<MainChar> registrar("PLAYER");
 
 MainChar::MainChar(Properties* props): Character(props) {
     m_jumpTime = 15.0f;

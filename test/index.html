@@ -30,6 +30,7 @@
 </span>-->
 
     <div class="emscripten">
+      <h1 id="update" style="display: none;">update available! reload to apply update</h1>
       <progress value="0" max="100" id="progress" hidden=1></progress>
       <div style="flex-wrap: wrap;background: rgb(233 218 218 / 30%);margin: auto;width: 75%;text-align: center;border-radius: 5px;">
         <h1 style="color: rgb(106 87 87 / 90%);text-shadow: #e0e0e0 1px 1px 0, 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #257e00, 0 0 30px;">jumpy_game</h1>
@@ -45,7 +46,35 @@
     <h1 style="text-shadow: #474747 3px 5px 2px;">jumpy game</h1>
 </div>
     </div>
-
+    <script type="text/javascript">
+      var url = location.href.replace("index.html","");
+      window.url = url;
+      window.addEventListener('load', () => {
+        if ('serviceWorker' in navigator){
+          navigator.serviceWorker.getRegistration(url).then((controller) => {
+            if (controller){
+              
+              controller.onupdatefound = () => {
+                const work = controller.installing;
+                work.onstatechange = () => {
+                  if (work.state == "installed" && navigator.serviceWorker.controller){
+                    document.getElementById("update").style.display = 'block';
+                  }
+                }
+              }
+              return;
+            } else {
+              navigator.serviceWorker.register(url + "sw.js").then(() => {
+                console.log("Registered service worker!");
+              }).catch((error) => {
+                console.warn("Error" + error);
+              })
+            }
+          })
+          
+        }
+      })
+    </script>
     <script type='text/javascript'>
       var statusElement = document.getElementById('status');
       var progressElement = document.getElementById('progress');

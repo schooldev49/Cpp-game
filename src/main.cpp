@@ -1,7 +1,9 @@
 #define SDL_MAIN_HANDLED 1
 
-#include <iostream>
+#include <stdio.h>
+
 #include <cstdio>
+#include <iostream>
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_image.h>
 #include "systemfiles/Engine.h"
@@ -34,9 +36,10 @@ int main(void){
     
     
     if (SDL_Init(SDL_INIT_VIDEO) == 0 && IMG_Init(IMG_INIT_JPG | IMG_INIT_PNG) != 0){
-        std::cout << "success!\n";
+        printf("success!\n");
     } else {
-        std::cout << "there is an error: " << SDL_GetError() << "\n";
+        const char *__cdecl error = SDL_GetError();
+        std::cout << "error" << error << "\n";
         return EXIT_FAILURE;
     };
     static Engine* engine = Engine::GetInstance();

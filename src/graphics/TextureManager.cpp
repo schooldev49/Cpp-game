@@ -100,7 +100,6 @@ bool TextureManager::ParseTexture(std::string source){
         if (e->Value() == std::string("texture")){
             std::string id = e->Attribute("id");
             std::string src = e->Attribute("source");
-            std::cout << src << " is the source!";
             Load(id,src);
         }
     }

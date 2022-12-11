@@ -78,7 +78,6 @@ class Button : public GameObject {
 
             if (SDL_PointInRect(&point,&m_Shape)){
                 if (Input::GetInstance()->isDown() && m_isReleased){
-                    std::cout << bT << " is cool..\n";
                     m_Callback(bT);
                     m_isReleased = false;
                     tID = m_TextrIds[PRESSED];

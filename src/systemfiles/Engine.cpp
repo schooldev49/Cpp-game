@@ -4,7 +4,6 @@
 #include <SDL2/SDL_image.h>
 #include "../graphics/TextureManager.h"
 #include "../player/MainChar.h"
-#include "../systemfiles/ObjectR.h"
 #include "../physics/Transform.h"
 #include <SDL2/SDL_ttf.h>
 #include "../viewport/Viewport.h"
@@ -45,13 +44,10 @@ bool Engine::Init(){
         return false;
     }
 
-    std::cout << "Initializing..\n";
     play = Play::GetInstance();
-    std::cout << "Got instance!..\n";
     TextureManager::GetInstance()->AddFont("Comic Sans MS","assets/fonts/comic.ttf",16);
     changeState(Menu::GetInstance());
     play->Init();
-    std::cout << "Got instancedd!..\n";
 
     /*m_levelMap = MapParser::GetInstance()->GetMaps("level1");
     MapChunk* cL = (MapChunk*)m_levelMap->GetMapChunks().back();

@@ -12,7 +12,6 @@ bool MapParser::Load(std::string id, std::string source){
         std::cout << "Nope!\n";
         return false;
     }
-    std::cout << "Parsed map!\n";
     return true;
 }
 
@@ -34,13 +33,11 @@ bool MapParser::CanEnterMap(std::string source){
     return true;
 }
 bool MapParser::Parse(std::string id, std::string source){
-    std::cout << "Parsing " << id << " from " << source << " ...\n";
     TiXmlDocument xml;
     xml.LoadFile(source);
     if (xml.Error()){
         return false;
     }
-    std::cout << "Loaded file!\n";
 
     TiXmlElement* root = xml.RootElement();
 
@@ -106,7 +103,6 @@ MapChunk* MapParser::ParseTileLayer(TiXmlElement* ele, TilesetList tilesets, int
     std::string id;
     
     TileMap tilemap(rowcount,std::vector<int> (colcount,0));
-    std::cout << "rows: " << rowcount << " cols: " << colcount << "\n";
     for (int row = 0; row < rowcount; row++){
         for (int col = 0; col < colcount; col++){
             getline(iss,id,','); // delimiter ",". goes from first char to "," - 0

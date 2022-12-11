@@ -4,9 +4,7 @@
 #include <iostream>
 typedef unsigned int uint;
 MapChunk::MapChunk(int p_tilesize, int p_rowcount, int p_colcount, TileMap p_tilemap, TilesetList p_tilesets): m_tileSize(p_tilesize), m_ColCount(p_colcount), m_rowCount(p_rowcount), m_Tilemap(p_tilemap), m_tileSets(p_tilesets) {
-    std::cout << "Initialized map layers!";
     for (uint i=0; i<m_tileSets.size(); i++){
-        std::cout << " incrementing by " << i << "\n";
         TextureManager::GetInstance()->Load(m_tileSets[i].Name,"assets/maps/" + m_tileSets[i].Source);
     }
     

@@ -31,7 +31,6 @@ class Map : public Layer {
 
         }
         std::vector<MapChunk*> GetMapChunks(){
-            std::cout << "Getting map chunk";
             return m_MapChunks;
         }
         std::vector<MapChunk*> m_MapChunks;

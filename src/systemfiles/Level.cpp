@@ -4,7 +4,6 @@ bool Level::open = false;
 bool Level::Init(std::string mapN){
     if (m_guiObjects.size() == 0){
      std::string mapID = Play::GetInstance()->mapName;
-      std::cout << mapID << " is loading...\n";
         if (!MapParser::GetInstance()->Load(mapID, "assets/maps/" + mapID + ".tmx")){
             std::cout << "Unable to load map!";
         }
@@ -75,7 +74,6 @@ void Level::Update(float dt){
 
 void Level::Events(){
     if (Input::GetInstance()->getKeyDown(SDL_SCANCODE_M) || open == true){
-        std::cout << "open menu!\n";
         open = false;
         OpenMenu();
     }
@@ -115,9 +113,7 @@ void Level::OpenMenu(std::string str){
 std::string Level::AddLevelStr(bool add){
     if (Play::GetInstance()->mapName != ""){
         std::string substrD = Play::GetInstance()->mapName.substr(5, Play::GetInstance()->mapName.npos);
-        std::cout << "\n" << substrD << "\n";
         int id = std::stoi(substrD);
-        std::cout << id << "hi \n";
        /* if (add){ // currently only 2 MAP (trol)
             bool canEnter = MapParser::GetInstance()->CanEnterMap("assets/maps/" + std::to_string(id+1) + ".tmx");
             if (canEnter){
@@ -131,7 +127,6 @@ std::string Level::AddLevelStr(bool add){
         }*/
         if (id < 50 && add){ // currently only 2 MAP (trol)
             id += 1;
-            std::cout << id << "hi \n";
 
         } else if (add){
             id = 1;
@@ -146,7 +141,6 @@ std::string Level::AddLevelStr(bool add){
         ss << newLevelName << string2;
 
         std::string rval = ss.str();
-        std::cout << rval << " is the valreal2022\n";
         ss.str("");
         ss.clear();
 

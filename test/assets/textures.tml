@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<textures>
-
-    <texture id="bg" source="assets/background3.png"/>
-    <texture id="player" source="assets/char.png"/>
-    <texture id="button" source="assets/button.png"/>
-    <texture id="buttonhover" source="assets/buttont.png"/>
-</textures>

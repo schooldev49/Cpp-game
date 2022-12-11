@@ -3,7 +3,7 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "level6.tmx",
+    "activeFile": "level7.tmx",
     "expandedProjectPaths": [
         "."
     ],
@@ -113,8 +113,8 @@
             "scale": 0.75,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 3129.333333333333,
-                "y": 274.6666666666667
+                "x": 1600,
+                "y": 319.33333333333326
             }
         },
         "level6.tmx#Tileset": {
@@ -127,11 +127,14 @@
             "scale": 0.75,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 386.66666666666674,
-                "y": 640
+                "x": 535.9999999999999,
+                "y": 272
             }
         },
         "level7.tmx#Tileset": {
+            "scaleInDock": 1
+        },
+        "level7.tmx#fire": {
             "scaleInDock": 1
         },
         "level7.tmx#key": {
@@ -142,11 +145,13 @@
     "map.lastUsedFormat": "tmx",
     "map.width": 100,
     "openFiles": [
-        "level6.tmx"
+        "level6.tmx",
+        "level7.tmx"
     ],
     "project": "codeday2022game.tiled-project",
     "recentFiles": [
         "level6.tmx",
+        "level7.tmx",
         "level3.tmx",
         "level1.tmx",
         "level2.tmx",
