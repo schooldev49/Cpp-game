@@ -30,7 +30,7 @@ bool CollisionHandler::checkCollision(SDL_Rect a, SDL_Rect b){
     return (x_Overlaps && y_Overlaps);
 }
 
-bool CollisionHandler::MapCollision(SDL_Rect a){
+std::string CollisionHandler::MapCollision(SDL_Rect a){
     const int tSize = 32;
     const int rowCount = 20;
     const int colCount = 100;
@@ -50,10 +50,19 @@ bool CollisionHandler::MapCollision(SDL_Rect a){
     for (int i = leftTile; i <= rightTile; ++i){
         for (int j = topTile; j <= bottomTile; ++j){
             if (m_colTileMap[j][i] > 0){
-                return true;
+                if (m_colTileMap[j][i] == 33){
+                    // key
+                    
+                    return "key";
+                } else if (m_colTileMap[j][i] == 34){
+                    // spike
+
+                    return "fire";
+                }
+                return "platform";
             }
         }
     }
-    return false;
+    return "notColliding";
 
 }

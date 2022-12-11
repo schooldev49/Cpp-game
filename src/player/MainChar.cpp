@@ -12,7 +12,7 @@ MainChar::MainChar(Properties* props): Character(props) {
 
     m_Collider = new Collision();
 
-    m_Collider->SetBuffer(50,45,0,0);
+    m_Collider->SetBuffer(50,50,0,0);
 
     m_RigidBody = new RigidBody();
     m_RigidBody->setGravity(3.25f);
@@ -28,21 +28,21 @@ void MainChar::Draw(){
     if (!m_Transform->Y || m_Transform->Y >= 560){ // it's a crash bound to happen sometime - fallback
         m_Transform->Y = 200; // moves to default pos;
     }
-    if (m_Transform->X >= 3091){
+    if (CollisionHandler::GetInstance()->MapCollision(m_Collider->Get()) == "key"){
        std::cout << "You won!";
        // TODO: load map.
        std::string newName = Level::GetInstance()->AddLevelStr(true);
        Play::GetInstance()->setMapName(newName);
        Level::GetInstance()->ChangeMap();
-       m_Transform->X = 100;
-       m_Transform->Y = 200;
+       m_Transform->X = 5;
+       m_Transform->Y = 5;
        return;
     }
-    if (m_Transform->Y >= 510){
+    if (m_Transform->Y >= 510 || CollisionHandler::GetInstance()->MapCollision(m_Collider->Get()) == "fire"){
         
         std::cout << "\nYou Lost at " << m_Transform->Y << "!\n";
-        m_Transform->X = 100;
-        m_Transform->Y = 200;
+        m_Transform->X = 5;
+        m_Transform->Y = 5;
         return;
     } else {    
         m_Animation->Draw(m_Transform->X, m_Transform->Y,m_width,m_height,1,1,m_Flip);
@@ -80,18 +80,18 @@ void MainChar::Update(float dt){
 
     m_lastSafePosition.X = m_Transform->X;
     m_Transform->X += m_RigidBody->Position().X;
-    m_Collider->Set(m_Transform->X, m_Transform->Y, 23,78);
+    m_Collider->Set(m_Transform->X, m_Transform->Y, 23,73);
 
-    if (CollisionHandler::GetInstance()->MapCollision(m_Collider->Get())){
+    if (CollisionHandler::GetInstance()->MapCollision(m_Collider->Get()) == "platform"){
         m_Transform->X = m_lastSafePosition.X;
     }
 
     m_RigidBody->Update(dt);
     m_lastSafePosition.Y = m_Transform->Y;
     m_Transform->Y += m_RigidBody->Position().Y;
-    m_Collider->Set(m_Transform->X,m_Transform->Y,23,78);
+    m_Collider->Set(m_Transform->X,m_Transform->Y,23,73);
 
-    if (CollisionHandler::GetInstance()->MapCollision(m_Collider->Get())){
+    if (CollisionHandler::GetInstance()->MapCollision(m_Collider->Get()) == "platform"){
         m_isGrounded = true;
         m_Transform->Y = m_lastSafePosition.Y;
     } else {

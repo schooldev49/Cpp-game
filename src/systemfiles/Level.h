@@ -5,7 +5,7 @@
 
 #include "GameState.h"
 #include "Play.h"
-
+#include "../gui/Button.h"
 class Level : public GameState {
     public:
         Level(){};
@@ -17,13 +17,20 @@ class Level : public GameState {
         static Level* GetInstance(){
             return s_Instance = (s_Instance != nullptr) ? s_Instance : new Level();
         }
+        static void SetOpen (std::string st){
+            open = true;
+        }
         void ChangeMap();
         std::string AddLevelStr(bool add);
-        static void OpenMenu();
+        static void OpenMenu(std::string str="");
         static void PauseGame();
         std::vector<GameObject*> m_gameObjects;
         std::vector<GameObject*> m_guiObjects;
+        static bool open;
         Map* m_LevelMap;
+        Label* text;
+        Label* text1;
+        Button* menu;
 
 
     protected: 

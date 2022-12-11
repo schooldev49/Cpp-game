@@ -1,5 +1,6 @@
 #include "Level.h"
 Level* Level::s_Instance = nullptr;
+bool Level::open = false;
 bool Level::Init(std::string mapN){
     if (m_guiObjects.size() == 0){
      std::string mapID = Play::GetInstance()->mapName;
@@ -20,14 +21,14 @@ bool Level::Init(std::string mapN){
         SDL_Color white = {255,255,255,255};
         std::string e = Play::GetInstance()->mapName;
         std::string b = AddLevelStr(false);
-        Label* levelText = new Label(SCREEN_WIDTH/2, 32 ,118,32, "Level " + b.substr(5, e.npos), "Comic Sans MS", white);
-        Label* levelText2 = new Label(SCREEN_WIDTH/2, 70 ,118,32, "Time: xx: xx", "Comic Sans MS", white);
-
-        m_guiObjects.push_back(levelText);
-        m_guiObjects.push_back(levelText2);
-
+        text = new Label(SCREEN_WIDTH/2, 32 ,118,32, "Level " + b.substr(5, e.npos), "Comic Sans MS", white);
+        text1 = new Label(SCREEN_WIDTH/2, 70 ,118,32, "Time: xx: xx", "Comic Sans MS", white);
+        menu = new Button((SCREEN_WIDTH/2) - 100,50,75,50, SetOpen, {"button","buttonhover","button"},"Menu");
+        m_guiObjects.push_back(text);
+        m_guiObjects.push_back(text1);
+        m_guiObjects.push_back(menu);
     }
-    Properties* propChar = new Properties("player",100,200,160,160);
+    Properties* propChar = new Properties("player",5,5,160,160);
     MainChar* player = new MainChar(propChar);
     m_gameObjects.push_back(player);
     Viewport::GetInstance()->SetTarget(player->GetOrigin());
@@ -73,8 +74,9 @@ void Level::Update(float dt){
 }
 
 void Level::Events(){
-    if (Input::GetInstance()->getKeyDown(SDL_SCANCODE_M)){
+    if (Input::GetInstance()->getKeyDown(SDL_SCANCODE_M) || open == true){
         std::cout << "open menu!\n";
+        open = false;
         OpenMenu();
     }
 }
@@ -103,7 +105,7 @@ bool Level::Exit(){
 
 }
 
-void Level::OpenMenu(){
+void Level::OpenMenu(std::string str){
     Level::GetInstance()->Exit();
     std::cout << "Exited!\n";
     Engine::GetInstance()->changeState(Menu::GetInstance());
@@ -178,11 +180,21 @@ void Level::ChangeMap(){
         
         std::string b = AddLevelStr(false);
         std::string e = Play::GetInstance()->mapName;
-        Label* levelText = new Label(SCREEN_WIDTH/2, 32 ,118,32, "Level " + b.substr(5, e.npos), "Comic Sans MS", white);
-        Label* levelText2 = new Label(SCREEN_WIDTH/2, 70 ,118,32, "Time: xx: xx", "Comic Sans MS", white);
+        if (m_guiObjects.size() == 0 && menu == nullptr && text == nullptr && text1 == nullptr){
+        text = new Label(SCREEN_WIDTH/2, 32 ,118,32, "Level " + b.substr(5, e.npos), "Comic Sans MS", white);
+        text1 = new Label(SCREEN_WIDTH/2, 70 ,118,32, "Time: xx: xx", "Comic Sans MS", white);
+        menu = new Button((SCREEN_WIDTH/2)-100,50,75,50, SetOpen, {"button","buttonhover","button"},"Menu");
 
-        m_guiObjects.push_back(levelText);
-        m_guiObjects.push_back(levelText2);
+        m_guiObjects.push_back(text);
+        m_guiObjects.push_back(text1);
+        m_guiObjects.push_back(menu);
+
+        } else {
+            // already exists
+            text->SetLabelText("Level " + b.substr(5,e.npos), "Comic Sans MS");
+            text1->SetLabelText("Time: xx: xx", "Comic Sans MS");
+        }
+        
 
     }
 }

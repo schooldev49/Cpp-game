@@ -11,7 +11,7 @@
 class CollisionHandler {
     public:
         bool checkCollision(SDL_Rect a, SDL_Rect b);
-        bool MapCollision(SDL_Rect a);
+        std::string MapCollision(SDL_Rect a);
         void SetCollisionMap(TileMap map, int tSize);
         inline static CollisionHandler* GetInstance(){
             return s_Instance = (s_Instance != nullptr) ? s_Instance : new CollisionHandler();

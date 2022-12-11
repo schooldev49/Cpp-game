@@ -27,7 +27,7 @@ class Collision {
                 h - m_Buffer.h
             };
         }
-        bool Collides(){
+        std::string Collides(){
             return CollisionHandler::GetInstance()->MapCollision(m_Box);
         }
 

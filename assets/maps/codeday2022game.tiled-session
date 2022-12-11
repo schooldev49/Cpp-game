@@ -3,7 +3,7 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "level4.tmx",
+    "activeFile": "level6.tmx",
     "expandedProjectPaths": [
         "."
     ],
@@ -28,8 +28,8 @@
             "scale": 1,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 1600,
-                "y": 319.5
+                "x": 3053,
+                "y": 318
             }
         },
         "level1.tmx#Tileset": {
@@ -57,8 +57,8 @@
             "scale": 0.75,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 1600,
-                "y": 320.6666666666667
+                "x": 2898.6666666666665,
+                "y": 321.33333333333326
             }
         },
         "level2.tmx#Tileset": {
@@ -69,10 +69,10 @@
         },
         "level3.tmx": {
             "scale": 0.75,
-            "selectedLayer": 0,
+            "selectedLayer": 1,
             "viewCenter": {
-                "x": 1600,
-                "y": 320.6666666666667
+                "x": 2820,
+                "y": 318.6666666666667
             }
         },
         "level3.tmx#Tileset": {
@@ -83,10 +83,10 @@
         },
         "level4.tmx": {
             "scale": 0.75,
-            "selectedLayer": 0,
+            "selectedLayer": 1,
             "viewCenter": {
-                "x": 1288,
-                "y": 724
+                "x": 2668,
+                "y": 344
             }
         },
         "level4.tmx#Tileset": {
@@ -94,24 +94,66 @@
         },
         "level4.tmx#key": {
             "scaleInDock": 1
+        },
+        "level5.tmx": {
+            "scale": 0.75,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 2760,
+                "y": 482.66666666666663
+            }
+        },
+        "level5.tmx#Tileset": {
+            "scaleInDock": 1
+        },
+        "level5.tmx#key": {
+            "scaleInDock": 1
+        },
+        "level6.tmx": {
+            "scale": 0.75,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 3129.333333333333,
+                "y": 274.6666666666667
+            }
+        },
+        "level6.tmx#Tileset": {
+            "scaleInDock": 1
+        },
+        "level6.tmx#key": {
+            "scaleInDock": 1
+        },
+        "level7.tmx": {
+            "scale": 0.75,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 386.66666666666674,
+                "y": 640
+            }
+        },
+        "level7.tmx#Tileset": {
+            "scaleInDock": 1
+        },
+        "level7.tmx#key": {
+            "scaleInDock": 1
         }
     },
     "last.imagePath": "C:/Users/yxiao/codeday2022game/assets/maps",
     "map.lastUsedFormat": "tmx",
     "map.width": 100,
     "openFiles": [
-        "level1.tmx",
-        "level2.tmx",
-        "level3.tmx",
-        "level4.tmx"
+        "level6.tmx"
     ],
     "project": "codeday2022game.tiled-project",
     "recentFiles": [
-        "level4.tmx",
+        "level6.tmx",
+        "level3.tmx",
         "level1.tmx",
         "level2.tmx",
-        "level3.tmx"
+        "level5.tmx",
+        "level4.tmx"
     ],
     "tileset.embedInMap": true,
-    "tileset.type": 0
+    "tileset.type": 0,
+    "tileset.useTransparentColor": false
 }
