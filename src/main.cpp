@@ -38,8 +38,7 @@ int main(void){
     if (SDL_Init(SDL_INIT_VIDEO) == 0 && IMG_Init(IMG_INIT_JPG | IMG_INIT_PNG) != 0){
         printf("success!\n");
     } else {
-        const char *__cdecl error = SDL_GetError();
-        std::cout << "error" << error << "\n";
+        std::cout << "error" << SDL_GetError() << "\n";
         return EXIT_FAILURE;
     };
     static Engine* engine = Engine::GetInstance();

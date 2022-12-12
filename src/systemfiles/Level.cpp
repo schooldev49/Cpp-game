@@ -125,7 +125,7 @@ std::string Level::AddLevelStr(bool add){
             }
 
         }*/
-        if (id < 50 && add){ // currently only 2 MAP (trol)
+        if (id < 12 && add){ // currently only 12 MAP (trol)
             id += 1;
 
         } else if (add){

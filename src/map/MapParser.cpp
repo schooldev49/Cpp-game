@@ -25,8 +25,12 @@ void MapParser::Clean(){
 }
 
 bool MapParser::CanEnterMap(std::string source){
+    if (std::stoi(source.substr(5, source.npos)) > 12){
+        return false;
+    };
+    std::string actualsource = "assets/maps/" + source + ".tmx";
     TiXmlDocument xml;
-    xml.LoadFile(source);
+    xml.LoadFile(actualsource);
     if (xml.Error()){
         return false;
     }

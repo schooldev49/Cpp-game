@@ -48,7 +48,7 @@ void LevelSelector::clickCallbackHandler(std::string mapName){
     std::string conc = "level";
 
     conc += mapName;
-    if (MapParser::GetInstance()->CanEnterMap("assets/maps/" + conc + ".tmx")){
+    if (MapParser::GetInstance()->CanEnterMap(conc)){
         Play::GetInstance()->setMapName(conc);
         SDL_Color color = {255,255,255,255};
         status->SetTextColor(color);
