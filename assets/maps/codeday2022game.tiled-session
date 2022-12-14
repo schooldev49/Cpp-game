@@ -3,7 +3,7 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "level12.tmx",
+    "activeFile": "level5.tmx",
     "expandedProjectPaths": [
         "."
     ],
@@ -72,7 +72,7 @@
         },
         "level11.tmx": {
             "scale": 0.75,
-            "selectedLayer": 0,
+            "selectedLayer": 1,
             "viewCenter": {
                 "x": 2768,
                 "y": 496
@@ -89,10 +89,10 @@
         },
         "level12.tmx": {
             "scale": 0.75,
-            "selectedLayer": 1,
+            "selectedLayer": 0,
             "viewCenter": {
-                "x": 79.99999999999994,
-                "y": 274.6666666666667
+                "x": 3236,
+                "y": 273.33333333333326
             }
         },
         "level12.tmx#Tileset": {
@@ -164,8 +164,8 @@
             "scale": 0.75,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 1600,
-                "y": 319.33333333333326
+                "x": 978.6666666666667,
+                "y": 318.6666666666667
             }
         },
         "level6.tmx#Tileset": {
@@ -212,7 +212,7 @@
             "scale": 1,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 3048,
+                "x": -108,
                 "y": 491
             }
         },
@@ -230,21 +230,25 @@
     "map.lastUsedFormat": "tmx",
     "map.width": 100,
     "openFiles": [
-        "level12.tmx"
+        "level12.tmx",
+        "level11.tmx",
+        "level6.tmx",
+        "level9.tmx",
+        "level5.tmx"
     ],
     "project": "codeday2022game.tiled-project",
     "recentFiles": [
         "level12.tmx",
         "level11.tmx",
+        "level6.tmx",
+        "level9.tmx",
+        "level5.tmx",
         "level10.tmx",
         "level8.tmx",
-        "level9.tmx",
-        "level6.tmx",
         "level7.tmx",
         "level3.tmx",
         "level1.tmx",
         "level2.tmx",
-        "level5.tmx",
         "level4.tmx"
     ],
     "tileset.embedInMap": true,
