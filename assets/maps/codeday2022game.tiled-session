@@ -74,8 +74,8 @@
             "scale": 0.75,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 2768,
-                "y": 496
+                "x": 1600,
+                "y": 320.6666666666667
             }
         },
         "level11.tmx#Tileset": {
@@ -91,8 +91,8 @@
             "scale": 0.75,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 3236,
-                "y": 273.33333333333326
+                "x": 1600,
+                "y": 319.33333333333326
             }
         },
         "level12.tmx#Tileset": {
@@ -164,8 +164,8 @@
             "scale": 0.75,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 978.6666666666667,
-                "y": 318.6666666666667
+                "x": 1600,
+                "y": 320.6666666666667
             }
         },
         "level6.tmx#Tileset": {
@@ -212,8 +212,8 @@
             "scale": 1,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": -108,
-                "y": 491
+                "x": 1600,
+                "y": 319.5
             }
         },
         "level9.tmx#Tileset": {

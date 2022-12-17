@@ -5,7 +5,7 @@ Play* Play::s_Instance = nullptr;
 #define m_gameObjects Level::GetInstance()->m_gameObjects
 
 
-bool Play::Init(std::string mapName){
+bool Play::Init(){
    TextureManager::GetInstance()->ParseTexture("assets/textures.tml");
 
    Engine::GetInstance()->getState()->Init();

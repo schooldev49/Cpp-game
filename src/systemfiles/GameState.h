@@ -6,7 +6,7 @@
 #include <SDL2/SDL.h>
 class GameState {
     public:
-        virtual bool Init(std::string mapName = "level1")=0;
+        virtual bool Init()=0;
         virtual bool Exit()=0;
 
         virtual void Update(float dt)=0;

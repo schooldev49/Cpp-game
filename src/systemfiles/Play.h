@@ -25,7 +25,7 @@ class Play : public GameState {
     public:
         Play(){};
         void Events();
-        virtual bool Init(std::string mapName = "level1");
+        virtual bool Init();
         virtual bool Exit();
         virtual void Update(float dt);
         virtual void Render();

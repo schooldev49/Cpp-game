@@ -6,7 +6,7 @@ Menu* Menu::s_Instance = nullptr;
 
 Menu::Menu(){}
 
-bool Menu::Init(std::string level){
+bool Menu::Init(){
     if (SDL_GetError()){
         std::cout << "There was an error! " << SDL_GetError(); // this is fake...
     }
@@ -48,9 +48,8 @@ void Menu::Update(float dt){
 void Menu::startGame(std::string tx){
     // TODO: Open level selector!
     // After opening... return level.
-    std::string level = Play::GetInstance()->mapName;
     Engine::GetInstance()->changeState(Level::GetInstance());
-    Level::GetInstance()->Init(level);
+    Level::GetInstance()->Init();
 }
 
 void Menu::settings(){
@@ -59,7 +58,7 @@ void Menu::settings(){
 
 void Menu::levelSelector(std::string st){
     Engine::GetInstance()->changeState(LevelSelector::GetInstance());
-    LevelSelector::GetInstance()->Init(st);
+    LevelSelector::GetInstance()->Init();
 }
 
 void Menu::quit(){

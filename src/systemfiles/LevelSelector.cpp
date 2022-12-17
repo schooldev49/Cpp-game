@@ -2,7 +2,7 @@
 LevelSelector* LevelSelector::s_Instance = nullptr;
 Label* LevelSelector::status = nullptr;
 
-bool LevelSelector::Init(std::string mapName){
+bool LevelSelector::Init(){
     // draw GUI
     // each row has 5 levels, and there are 10 columns
     int count = 1;
